@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringToPatterns.Tests", "RefactoringToPatterns.Tests\RefactoringToPatterns.Tests.csproj", "{6E49F4DC-8D6A-4DED-970C-D9C4DDD43A40}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveAccumulationToCollectingParameter", "MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj", "{E55105E2-9A9C-4C43-9E98-EF308663F77D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractComposite", "ExtractComposite\ExtractComposite.csproj", "{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceHardCodedNotificationsWithObserver", "ReplaceHardCodedNotificationsWithObserver\ReplaceHardCodedNotificationsWithObserver.csproj", "{A7E58A4E-9085-4A9D-B925-42D08D942E8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E2CDE77F-B553-4AC6-BD01-0EA29FE68BB2}"
 EndProject
@@ -84,6 +86,13 @@ Global
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
