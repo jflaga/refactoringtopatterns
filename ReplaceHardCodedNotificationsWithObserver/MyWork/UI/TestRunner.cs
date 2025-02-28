@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReplaceHardCodedNotificationsWithObserver.MyWork.TextUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReplaceHardCodedNotificationsWithObserver.MyWork.UI
 {
-    public class TestRunner : Frame // TestRunner for AWT
+    public class TestRunner : Frame, ITestListener // TestRunner for AWT
     {
         private TestResult fTestResult;
         private TestSuite testSuite;
@@ -15,7 +16,7 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork.UI
 
         protected TestResult CreateTestResult()
         {
-            return new UITestResult(this);
+            return new TestResult(this);
         }
 
         private readonly object syncLock = new object();
@@ -33,6 +34,21 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork.UI
         {
             // ...
             // display the failure in a graphical AWT window
+        }
+
+        public void EndTest(TestResult uITestResult, Test test)
+        {
+            //
+        }
+
+        public void AddError(TestResult textTestResult, Test test, Exception ex)
+        {
+            //
+        }
+
+        public void StartTest(TestResult textTestResult, Test test)
+        {
+            //
         }
     }
 }

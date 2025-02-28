@@ -42,12 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyWork\Test.cs" />
+    <Compile Include="MyWork\TestFailure.cs" />
     <Compile Include="MyWork\TestResult.cs" />
-    <Compile Include="MyWork\TextUI\TextTestResult.cs" />
+    <Compile Include="MyWork\ITestListener.cs" />
+    <Compile Include="MyWork\TextUI\TestRunner.cs" />
     <Compile Include="MyWork\UI\Frame.cs" />
     <Compile Include="MyWork\UI\TestRunner.cs" />
     <Compile Include="MyWork\UI\TestSuite.cs" />
-    <Compile Include="MyWork\UI\UITestResult.cs" />
     <Compile Include="InitialCode\Test.cs" />
     <Compile Include="InitialCode\TestResult.cs" />
     <Compile Include="InitialCode\TextUI\TextTestResult.cs" />
