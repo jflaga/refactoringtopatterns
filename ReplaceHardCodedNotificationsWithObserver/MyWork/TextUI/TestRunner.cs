@@ -6,7 +6,9 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork.TextUI
     {
         protected TestResult CreateTestResult()
         {
-            return new TestResult(this);
+            var testResult = new TestResult();
+            testResult.AddObserver(this);
+            return testResult;
         }
 
         protected void DoRun(Test suite, bool wait)

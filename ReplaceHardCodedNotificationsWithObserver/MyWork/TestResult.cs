@@ -8,8 +8,6 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
 {
     public class TestResult
     {
-        protected ITestListener fRunner;
-
         private List<TestFailure> fFailures;
         private List<TestFailure> fErrors;
         private int fRunTests;
@@ -17,11 +15,7 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
 
         private readonly object syncLock = new object();
 
-        public TestResult(ITestListener runner)
-            : this()
-        {
-            fRunner = runner;
-        }
+        private IList<ITestListener> observers = new List<ITestListener>();
 
         public TestResult()
         {
@@ -31,13 +25,20 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
             fStop = false;
         }
 
+        public void AddObserver(ITestListener testListener)
+        {
+            observers.Add(testListener);
+        }
+
         public virtual void AddError(Test test, Exception ex)
         {
             lock (syncLock)
             {
                 fErrors.Add(new TestFailure(test, ex));
-                if (fRunner != null)
-                    fRunner.AddError(this, test, ex);
+                foreach (var observer in observers)
+                {
+                    observer.AddError(this, test, ex);
+                }
             }
         }
 
@@ -46,8 +47,10 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
             lock (syncLock)
             {
                 fFailures.Add(new TestFailure(test, ex));
-                if (fRunner != null)
-                    fRunner.AddFailure(this, test, ex);
+                foreach (var observer in observers)
+                {
+                    observer.AddFailure(this, test, ex);
+                }
             }
         }
 
@@ -55,8 +58,10 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
         {
             lock (syncLock)
             {
-                if (fRunner != null)
-                    fRunner.EndTest(this, test);
+                foreach (var observer in observers)
+                {
+                    observer.EndTest(this, test);
+                }
             }
         }
 
@@ -64,8 +69,10 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork
         {
             lock (syncLock)
             {
-                if (fRunner != null)
-                    fRunner.StartTest(this, test);
+                foreach (var observer in observers)
+                {
+                    observer.StartTest(this, test);
+                }
             }
         }
     }

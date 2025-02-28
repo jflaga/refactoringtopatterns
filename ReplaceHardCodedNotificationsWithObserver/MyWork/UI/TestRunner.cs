@@ -16,7 +16,9 @@ namespace ReplaceHardCodedNotificationsWithObserver.MyWork.UI
 
         protected TestResult CreateTestResult()
         {
-            return new TestResult(this);
+            var testResult = new TestResult();
+            testResult.AddObserver(this);
+            return testResult;
         }
 
         private readonly object syncLock = new object();
