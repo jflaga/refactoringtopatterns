@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringToPatterns.Tests", "RefactoringToPatterns.Tests\RefactoringToPatterns.Tests.csproj", "{6E49F4DC-8D6A-4DED-970C-D9C4DDD43A40}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceConstructorsWithCreationMethods", "ReplaceConstructorsWithCreationMethods\ReplaceConstructorsWithCreationMethods.csproj", "{62ECDEAE-B8A4-4CD1-ACF5-E11965928B4B}"
@@ -24,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveAccumulationToCollectingParameter", "MoveAccumulationToCollectingParameter\MoveAccumulationToCollectingParameter.csproj", "{E55105E2-9A9C-4C43-9E98-EF308663F77D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractComposite", "ExtractComposite\ExtractComposite.csproj", "{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceHardCodedNotificationsWithObserver", "ReplaceHardCodedNotificationsWithObserver\ReplaceHardCodedNotificationsWithObserver.csproj", "{A7E58A4E-9085-4A9D-B925-42D08D942E8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,5 +82,12 @@ Global
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0BAF76-F1E5-45F5-B4C7-8B2C8E005249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E58A4E-9085-4A9D-B925-42D08D942E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
